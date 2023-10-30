@@ -7,7 +7,7 @@ import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
     console.log('Database connected');
 }).catch((error) => {   
     console.error('Database connection error:', error);
